@@ -1,4 +1,4 @@
-# Why I am doing this
+# Why am doing this?
 
 I am developing this healthcare software project to demonstrate my technical capability as an IT Professional.
 
