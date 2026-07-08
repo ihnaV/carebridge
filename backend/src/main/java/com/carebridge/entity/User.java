@@ -4,6 +4,8 @@ import java.util.*;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
@@ -17,28 +19,38 @@ import jakarta.persistence.PreUpdate;
 @Table(name = "users")
 public class User{
     @NotBlank
+    @Column(nullable=false, length=100)
     private String firstName;
+    @Column(length=100)
     private String middleName;
     @NotBlank
+    @Column(nullable=false, length=100)
     private String lastName;
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    @Column(unique = true)
+
+    @Column(length=20)
     private String mobileNumber;
     
     @NotBlank
     @Email
-    @Column(unique = true)
+    @Column(nullable=false, unique = true)
     private String email;
     private boolean emailVerified = false;
+
     @NotBlank
+    @Column(nullable=false)
     private String password;
+
+    @Enumerated(EnumType.STRING)
     private UserRole role; //PATIENT, DOCTOR, ADMIN
+
+    @Enumerated(EnumType.STRING)
     private UserStatus status; //ACTIVE, INACTIVE, LOCKED
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    
     private Instant createdAt;
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Instant updatedAt;
 
     @PrePersist
@@ -59,7 +71,6 @@ public class User{
         this.middleName = middleName;
         this.lastName = lastName;
         this.mobileNumber = mobileNumber;
-        this.id = java.util.UUID.randomUUID();
         this.email = email;
         this.password = password;
         this.role = role;
