@@ -1,35 +1,27 @@
-package entity;
-import java.time.Instant;
-import java.util.*;
+package com.carebridge.backend.models;
 
 public class User{
     private String firstName;
     private String lastName;
-    private UUID id;
+    private String id;
     private String mobileNumber;
     private String email;
     private String password;
-    private UserRole role; //PATIENT, DOCTOR, ADMIN
-    private UserStatus status; //ACTIVE, INACTIVE, LOCKED
-    private Instant createdAt;
-    private Instant updatedAt;
+    private String role; //PATIENT, DOCTOR, ADMIN
+    private String status; //ACTIVE, INACTIVE, LOCKED
 
+    public User() {
+    }
 
-    public User(String firstName, String lastName, String mobileNumber, String email, String password, UserRole role, UserStatus status) {
+    public User(String firstName, String lastName, String mobileNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.mobileNumber = mobileNumber;
-        this.id = java.util.UUID.randomUUID();
-        this.email = email;
-        this.password = password;
-        this.role = role;
-        this.status = status;
-        this.createdAt = Instant.now();
-        this.updatedAt = Instant.now();
-    }
-
-    public User() {
-        //TODO Auto-generated constructor stub
+        this.id = java.util.UUID.randomUUID().toString();
+        this.email = "";
+        this.password = "";             
+        this.role = "";
+        this.status = "ACTIVE"; // Default status is ACTIVE
     }
 
     public String getFirstName() {
@@ -38,8 +30,6 @@ public class User{
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-        this.updatedAt = Instant.now();
-    
     }
 
     public String getLastName() {
@@ -48,7 +38,6 @@ public class User{
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-        this.updatedAt = Instant.now();
     }
 
     public String getMobileNumber() {
@@ -57,16 +46,14 @@ public class User{
 
     public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
-        this.updatedAt = Instant.now();
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
-        this.updatedAt = Instant.now();
     }
 
     public String getEmail() {
@@ -75,7 +62,6 @@ public class User{
 
     public void setEmail(String email) {
         this.email = email;
-        this.updatedAt = Instant.now();
     }
 
     public String getPassword() {
@@ -84,24 +70,21 @@ public class User{
 
     public void setPassword(String password) {
         this.password = password;
-        this.updatedAt = Instant.now();
     }
 
-    public UserRole getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(UserRole role) {
+    public void setRole(String role) {
         this.role = role;
-        this.updatedAt = Instant.now();
     }
 
-    public UserStatus getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(UserStatus status) {
+    public void setStatus(String status) {
         this.status = status;
-        this.updatedAt = Instant.now();
     }
 }

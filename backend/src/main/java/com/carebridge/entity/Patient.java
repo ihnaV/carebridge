@@ -1,4 +1,4 @@
-package entity;
+package com.carebridge.entity;
 
 public class Patient extends User{
     private String medicalRecordNumber;
