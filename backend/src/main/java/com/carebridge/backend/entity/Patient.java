@@ -1,6 +1,6 @@
-package com.carebridge.entity;
+package com.carebridge.backend.entity;
 
-public class Patient extends User{
+public class Patient extends User {
     private String medicalRecordNumber;
     private String dateOfBirth;
     private String gender;
@@ -9,8 +9,8 @@ public class Patient extends User{
         super();
     }
 
-    public Patient(String firstName, String lastName, String mobileNumber, String email, String password, UserRole role, UserStatus status, String medicalRecordNumber, String dateOfBirth, String gender) {
-        super(firstName, lastName, mobileNumber, email, password, role, status);
+    public Patient(String firstName, String middleName, String lastName, String mobileNumber, String email, String password, UserRole role, UserStatus status, String medicalRecordNumber, String dateOfBirth, String gender) {
+        super(firstName, middleName, lastName, mobileNumber, email, password, role, status);
         this.medicalRecordNumber = medicalRecordNumber;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;

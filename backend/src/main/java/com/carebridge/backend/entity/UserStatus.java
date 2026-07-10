@@ -1,4 +1,4 @@
-package com.carebridge.entity;
+package com.carebridge.backend.entity;
 
 public enum UserStatus {
     ACTIVE,
