@@ -1,4 +1,4 @@
-package com.carebridge.entity;
+package com.carebridge.backend.entity;
 import java.time.Instant;
 import java.util.*;
 
@@ -21,8 +21,10 @@ public class User{
     @NotBlank
     @Column(nullable=false, length=100)
     private String firstName;
+
     @Column(length=100)
     private String middleName;
+    
     @NotBlank
     @Column(nullable=false, length=100)
     private String lastName;
@@ -90,6 +92,14 @@ public class User{
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public String getLastName() {

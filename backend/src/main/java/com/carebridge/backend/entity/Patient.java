@@ -1,6 +1,6 @@
-package com.carebridge.entity;
+package com.carebridge.backend.entity;
 
-public class Patient extends User{
+public class Patient extends User {
     private String medicalRecordNumber;
     private String dateOfBirth;
     private String gender;
