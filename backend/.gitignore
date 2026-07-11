@@ -31,5 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Modernize generated artifacts ###
+.github/modernize/
  ### local credentials ###
  application-local.yml
