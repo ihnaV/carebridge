@@ -1,0 +1,7 @@
+# Ignore generated modernization artifacts
+.github/modernize/
+
+# Always track GitHub Actions workflows
+!.github/
+!.github/workflows/
+!.github/workflows/**
