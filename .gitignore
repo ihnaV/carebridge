@@ -1,10 +1,9 @@
 # Ignore generated modernization artifacts
 .github/modernize/
-.backend/github/modernize/
+backend/.github/modernize/
 
-
-
-# Always track GitHub Actions workflows
-!.backend/github/
-!.backend/github/workflows/
-!.backend/github/workflows/**
+# Track only backend GitHub Actions workflows
+!backend/.github/
+backend/.github/*
+!backend/.github/workflows/
+!backend/.github/workflows/**
