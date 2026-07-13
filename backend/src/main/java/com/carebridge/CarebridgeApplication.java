@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CareridgeApplication {
+public class CarebridgeApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CareridgeApplication.class, args);
+        SpringApplication.run(CarebridgeApplication.class, args);
     }
 
 }
