@@ -2,4 +2,4 @@ spring:
   datasource:
     url: jdbc:postgresql://db.ogwtxrtynreoeqkybkyy.supabase.co:5432/postgres?sslmode=require
     username: postgres
-    password: AuiRGvEQFzGCQcNV
+    password: xzTEnlg6vJPNO4qV
