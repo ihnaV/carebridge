@@ -1,11 +1,10 @@
 package com.carebridge.backend.service;
 
-import org.springframework.lang.NonNull;
-
-import com.carebridge.backend.entity.User;
+import com.carebridge.backend.dto.CreateUserRequest;
+import com.carebridge.backend.dto.UserResponse;
 
 public interface UserService {
 
-    User createUser(@NonNull User user);
+    UserResponse createUser(CreateUserRequest user);
 
 }

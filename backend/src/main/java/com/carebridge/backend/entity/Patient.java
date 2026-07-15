@@ -20,23 +20,11 @@ public class Patient extends User {
         return medicalRecordNumber;
     }
 
-    public void setMedicalRecordNumber(String medicalRecordNumber) {
-        this.medicalRecordNumber = medicalRecordNumber;
-    }
-
     public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     public String getGender() {
         return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
     }
 }
